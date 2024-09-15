@@ -11,7 +11,7 @@ Notepad Local Storage is a simple web-based application that allows users to wri
 
 ## Demo
 
-You can see a live demo of the project [here](#) (if applicable, insert the link to your hosted project).
+You can see a live demo of the project [https://jidandev.github.io/NotePad/](#)
 
 ## Installation
 
