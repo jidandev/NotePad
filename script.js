@@ -134,7 +134,6 @@ addBtn.addEventListener('click', () => {
 noteBtn.addEventListener('click', () => {
     filterNote(noteFind.value)
     noteFind.value = "";
-    addNotif(1, "Sukses menambhkan catatan")
 })
 
 loadNote();
