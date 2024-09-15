@@ -1,0 +1,153 @@
+.container {
+    position: relative;
+    top: 30px;
+    left: 0%;
+    width: 500px;
+}
+
+.input-group {
+    width: 450px;
+}
+
+.list-group {
+    position: relative;
+    width: 450px;
+}
+
+.list-group li:hover {
+    color: green;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.add-group {
+    position: absolute;
+    top: 80px;
+    left: -500px;
+    width: 450px;
+}
+
+.modalIsi {
+    width: 465px; /* Atur lebar maksimum container */
+    word-wrap: break-word;
+  }
+
+.addBtn {
+    position: fixed;
+    top: 80%;
+    left: 47%;
+}
+
+/* NOTIFIKASI */
+.notif {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.notif li {
+    position: relative;
+    transform: translateX(330px);
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+    overflow: hidden;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.notif li.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.notif li h6 {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    text-align: left;
+}
+
+.bulat {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    border-radius: 50%;
+    width: 28px;
+    height: 22px;
+    background-color: red;
+    text-align: center;
+    padding-top: 0%;
+    color: white;
+}
+
+.garis {
+    position: absolute;
+    bottom: -15px;
+    width: 300px;
+    height: 20px;
+    background-color: red;
+    animation: loading 5s linear forwards;
+}
+
+@keyframes loading {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        position: relative;
+        top: 30px;
+        left: 0%;
+        width: 350px;
+    }
+    .input-group {
+        width: 100%;
+    }
+    .list-group {
+        position: relative;
+        width: 100%;
+    }
+
+    .addBtn {
+        position: fixed;
+        top: 80%;
+        left: 42%;
+    }
+
+    .notif li {
+
+        width: 200px;
+        height: 30px;
+    }
+
+    .bulat {
+        top: 5px;
+        left: 10px;
+        width: 17px;
+        height: 17px;
+        font-size: 0.8rem;
+    }
+
+    .notif li h6 {
+        top: 8px;
+        left: 30px;
+        font-size: .6rem;
+    }
+}
