@@ -54,6 +54,9 @@ function filterNote(judul) {
     if(getNote) {
         let notedList = JSON.parse(getNote);
         let noteFilter = notedList.filter(note => note.judul.includes(judul));
+        if(noteFilter.length === 0 && judul !== "") {
+            addNotif(2, "Catatan tidak ditemukan");
+        }
         noteFilter.forEach(item => {
             const note = document.createElement('li');
             note.classList.add('list-group-item')
@@ -78,8 +81,6 @@ function filterNote(judul) {
             noteList.appendChild(note);
 
         })
-    } else {
-        addNotif(2, "Catatan tidak ditemukan");
     }
 }
 
@@ -134,12 +135,8 @@ addBtn.addEventListener('click', () => {
 })
 
 noteBtn.addEventListener('click', () => {
-    if(noteFind.value == "") {
-        loadNote();
-    } else {
-        filterNote(noteFind.value)
-        noteFind.value = "";
-    }
+    filterNote(noteFind.value)
+    noteFind.value = "";
 })
 
 loadNote();
