@@ -129,7 +129,9 @@ function showModal(judul, isi) {
 }
 
 addBtn.addEventListener('click', () => {
-    addNote(noteJudul.value, noteIsi.value)
+    if(noteJudul.value !== "") {
+        addNote(noteJudul.value, noteIsi.value);
+    }
     noteJudul.value = "";
     noteIsi.value = "";
 })
