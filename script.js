@@ -78,6 +78,8 @@ function filterNote(judul) {
             noteList.appendChild(note);
 
         })
+    } else {
+        addNotif(2, "Catatan tidak ditemukan");
     }
 }
 
@@ -132,8 +134,12 @@ addBtn.addEventListener('click', () => {
 })
 
 noteBtn.addEventListener('click', () => {
-    filterNote(noteFind.value)
-    noteFind.value = "";
+    if(noteFind.value == "") {
+        loadNote();
+    } else {
+        filterNote(noteFind.value)
+        noteFind.value = "";
+    }
 })
 
 loadNote();
